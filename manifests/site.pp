@@ -1,6 +1,5 @@
 node default {
-
-  }
+}
 }
 node 'master.puppet.vm' {
   include role::master_server
@@ -8,6 +7,7 @@ node 'master.puppet.vm' {
     ensure => file,
     content => '$fqdn',
   }
+}
 node /^web/ {
 include role::app_server
 }
